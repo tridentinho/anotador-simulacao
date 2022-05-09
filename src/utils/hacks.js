@@ -67,7 +67,7 @@ const simulate = () => {
 
         } else {
             serviceStarted = addMinutesToDate(arrived, getRandomNumber(5, 20));
-            serviceEnded = addMinutesToDate(serviceStarted, getRandomNumber(1, 2));
+            serviceEnded = addSecondsToDate(serviceStarted, getRandomNumber(20, 40));
         }
         const newUser = {
             id: sha256(startDate.toString()).then(hash => hash.toString('hex')),
